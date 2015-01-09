@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WoT Olen'</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="main">
+      <div data-role="content">
+        Nickname:
+        <div data-role="fieldcontain">
+          <textarea cols="40" rows="8" name="user" id="user"></textarea>
+        </div>
+
+        <div class="ui-body ui-body-b">
+          <fieldset class="ui-grid-a">
+              <div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Cancel</button></div>
+              <div class="ui-block-b"><button type="submit" data-theme="a" id="b-submit">Submit</button></div>
+          </fieldset>
+        </div>
+        <div data-role="popup" id="popupPadded" class="ui-content">
+          <p>User not found!</p>
+        </div>
+      </div>
+    </div>
+    <script>
+    $().ready(function() {
+      $('#user').val(localStorage.getItem('user'));
+
+      $("#b-cancel").click(function() {
+        document.location = "pebblejs://close#cancel";
+      });
+
+      $("#b-submit").click(function() {
+
+        var app_id = "";
+        var nick = $("#user").val();
+        var url = "http://api.worldoftanks.ru/wot/account/list/?application_id=" + app_id + "&search=" + nick;
+        
+        $.getJSON(url, function(json) {
+          if (json.count == 0) { $("#popupPadded").popup("open") }
+          for (var i = 0; i <= json.count - 1; i++) {
+            if (json.data[i].nickname.toLowerCase() == nick.toLowerCase()) {
+              var options = {
+                'account_id': json.data[i].account_id
+              }
+              localStorage.setItem('account_id', JSON.stringify(options.account_id));
+              localStorage.setItem('user', json.data[i].nickname);
+              
+              var account_id = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
+              document.location = account_id;
+
+              break;
+            }
+          }
+        });
+      });
+    });
+    </script>
+  </body>
+</html>

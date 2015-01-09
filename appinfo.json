@@ -1,0 +1,137 @@
+{
+  "uuid": "eaa61601-b49a-412a-be9e-de70d3362256",
+  "shortName": "WoT Adjutant",
+  "longName": "WoT Adjutant",
+  "companyName": "Alexander Kropochev",
+  "versionCode": 3,
+  "versionLabel": "1.2",
+  "capabilities": [ "configurable" ],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "KEY_OK"                  :  0,
+    "KEY_NICKNAME"            :  1,
+    "KEY_PERSONAL_RATING"     :  2,
+    "KEY_BATTLES_FOUGHT"      :  3,
+    "KEY_VICTORIES"           :  4,
+    "KEY_BATTLES_SURVIVED"    :  5,
+    "KEY_TOTAL_XP"            :  6,
+    "KEY_AVG_XP"              :  7,
+    "KEY_MAXIMUM_XP"          :  8,
+    "KEY_VEHICLES_DESTROYED"  :  9,
+    "KEY_VEHICLES_SPOTTED"    : 10,
+    "KEY_DAMAGE_CAUSED"       : 11,
+    "KEY_HIT_RATIO"           : 12,
+    "KEY_PENETRATION_RATIO"   : 13,
+    "KEY_AVG_DAMAGE_BLOCKED"  : 14,
+    "KEY_ARMOR_USE_EFFICIENCY": 15,
+    "KEY_CAPTURE_POINTS"      : 16,
+    "KEY_DEFENSE_POINTS"      : 17
+  },
+  "resources": {
+    "media": [
+      {
+        "name": "ICON",
+        "file": "images/icon.png",
+        "type": "png",
+        "menuIcon": true
+      },
+      {
+        "name": "LOGO",
+        "file": "images/logo.png",
+        "type": "png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_1",
+        "file": "images/menu_icon_player.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_2",
+        "file": "images/menu_icon_personal_rating.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_3",
+        "file": "images/menu_icon_battles_count.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_4",
+        "file": "images/menu_icon_wins_ratio.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_5",
+        "file": "images/menu_icon_survived_ratio.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_6",
+        "file": "images/menu_icon_xp_amount.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_7",
+        "file": "images/menu_icon_xp_avg.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_8",
+        "file": "images/menu_icon_xp_max.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_9",
+        "file": "images/menu_icon_frags_count.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_10",
+        "file": "images/menu_icon_spotted_count.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_11",
+        "file": "images/menu_icon_damage_dealt.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_12",
+        "file": "images/menu_icon_hits_ratio.png"
+      }
+      ,
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_13",
+        "file": "images/menu_icon_piercing.png"
+      }
+      ,
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_14",
+        "file": "images/menu_icon_blocked_dmg.png"
+      }
+      ,
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_15",
+        "file": "images/menu_icon_tankovanie.png"
+      }
+      ,
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_16",
+        "file": "images/menu_icon_conquest_points.png"
+      }
+      ,
+      {
+        "type": "png",
+        "name": "IMAGE_MENU_ICON_17",
+        "file": "images/menu_icon_defence_points.png"
+      }
+    ]
+  }
+}
